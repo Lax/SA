@@ -1,0 +1,15 @@
+# Place this file in your /etc/yum.repos.d/ directory
+
+[fedora-virt-preview]
+name=Virtualization Preview Repository for Fedora 14 Users
+baseurl=http://repos.fedorapeople.org/repos/jforbes/virt-preview/fedora-$releasever/$basearch/
+enabled=1
+skip_if_unavailable=1
+gpgcheck=0
+
+[fedora-virt-preview-source]
+name=Virtualization Preview Repository for Fedora 14 Users - Source
+baseurl=http://repos.fedorapeople.org/repos/jforbes/virt-preview/fedora-$releasever/SRPMS
+enabled=0
+skip_if_unavailable=1
+gpgcheck=0

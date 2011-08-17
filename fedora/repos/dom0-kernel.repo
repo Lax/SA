@@ -1,0 +1,11 @@
+[dom0-kernel]
+name=Experimental pv_ops/dom0 kernels for Fedora - $basearch
+baseurl=http://repos.fedorapeople.org/repos/myoung/dom0-kernel/fedora-12/$basearch/
+enabled=0
+gpgcheck=0
+
+[dom0-kernel-source]
+name=Experimental pv_ops/dom0 kernels for Fedora - Source
+baseurl=http://repos.fedorapeople.org/repos/myoung/dom0-kernel/fedora-12/SRPMS/
+enabled=0
+gpgcheck=0

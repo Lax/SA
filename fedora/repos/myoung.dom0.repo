@@ -1,0 +1,11 @@
+[myoung-dom0]
+name=myoung's repository of Fedora based dom0 kernels - $basearch
+baseurl=http://fedorapeople.org/~myoung/dom0/$basearch/
+enabled=0
+gpgcheck=0
+
+[myoung-dom0-source]
+name=myoung's repository of Fedora based dom0 kernels - Source
+baseurl=http://fedorapeople.org/~myoung/dom0/src/
+enabled=0
+gpgcheck=0
