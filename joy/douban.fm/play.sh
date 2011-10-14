@@ -1,4 +1,5 @@
 #!/bin/bash
+rvm use system
 
 if [ $# -eq 1 ]
 then
