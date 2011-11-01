@@ -1,5 +1,6 @@
 #!/bin/bash
-rvm use system
+#rvm use system
+#export LANG='zh_CN.utf8'
 
 if [ $# -eq 1 ]
 then
@@ -10,5 +11,5 @@ fi
 
 while true
 do
-	./doubanfm.sh $channel 2> /dev/null
+	sh ./doubanfm.sh $channel 2> /dev/null
 done

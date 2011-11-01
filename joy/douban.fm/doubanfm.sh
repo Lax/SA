@@ -32,7 +32,7 @@ doubanURL="http://douban.fm/j/mine/playlist?type=n&channel=${channel}"
 
 curl $doubanURL | \
 ruby -e '
-	while line = gets and line.match(/(http[^"]*\.mp3)/)
-		puts $1
+	while line = gets and match = line.scan(/(http[^"]*\.mp3)/)
+		match.each {|m| puts m}
 	end' | \
 xargs $player
