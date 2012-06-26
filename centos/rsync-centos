@@ -1,0 +1,29 @@
+#!/bin/bash
+
+SITE="rsync://mirrors.kernel.org/centos/"
+BASE="/data/mirrors/centos/"
+
+if [ $( basename $0 | grep ^rsync-centos- ) ]
+then
+	CENTOS_VER=$( basename $0 | cut -c 14- )
+else
+	CENTOS_VER="5.8"
+fi
+
+LOCK=/var/lock/subsys/rsync_updates_${CENTOS_VER}
+
+if [ -f ${LOCK} ]; then
+    echo "Updates via rsync already running. ${LOCK}"
+    exit 0
+fi
+
+echo "Updating $CENTOS_VER"
+
+if [ -d $BASE/${CENTOS_VER} ] ; then
+    touch ${LOCK}
+    rsync  -avSHP --delete --exclude "local*" --exclude "isos" $SITE/$CENTOS_VER/ $BASE/$CENTOS_VER/
+    /bin/rm -f ${LOCK}
+else
+    echo "Target directory $BASE/$CENTOS_VER not present."
+fi
+
