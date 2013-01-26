@@ -12,4 +12,5 @@ fi
 while true
 do
 	sh ./doubanfm.sh $channel 2> /dev/null
+	sleep 1
 done

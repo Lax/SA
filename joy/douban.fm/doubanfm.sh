@@ -8,7 +8,6 @@
 # 法语 22
 # 日语 17
 # 韩语 18
-#
 # 民谣 8
 # 摇滚 7
 # 爵士 13
@@ -19,8 +18,8 @@
 # 说唱 15
 # 电影原声 10
 
-channel=2
-player=`which mplayer2`
+channel=9
+player=`which mplayer`
 
 if [ $# -eq 1 ]
 then
